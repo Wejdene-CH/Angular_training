@@ -1,0 +1,8 @@
+<div class="cv-container">
+  <div class="cv-list-section">
+    <app-liste (cvSelected)="onCvSelected($event)"></app-liste>
+  </div>
+  <div class="cv-detail-section">
+    <app-business-card [cv]="selectedCv"></app-business-card>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<!-- Liste des CVs -->
+<ul class="cv-list">
+  <li 
+    *ngFor="let cv of cvs" 
+    (click)="selectCv(cv)" 
+    [class.active]="cv === selectedCv" 
+    class="cv-item"
+  >
+    <img [src]="cv.path |defaultImage" alt="{{ cv.name }}" width="50" height="50" />
+    <span>{{ cv.firstname }} {{ cv.name }}</span>
+  </li>
+</ul>
+
+<!-- Section des Détails du CV -->
+<div class="cv-details" *ngIf="selectedCv">
+  <h3>Détails du CV</h3>
+  <img [src]="selectedCv.path" alt="{{ selectedCv.name }}" width="100" height="100" />
+  <p><strong>Nom :</strong> {{ selectedCv.firstname }} {{ selectedCv.name }}</p>
+  <p><strong>Âge :</strong> {{ selectedCv.age }}</p>
+  <p><strong>CIN :</strong> {{ selectedCv.cin }}</p>
+  <p><strong>Profession :</strong> {{ selectedCv.job }}</p>
+</div>

@@ -1,0 +1,101 @@
+
+<div class="main-container">
+  <!-- Form Side -->
+  <div class="form-section">
+    <h3>Card Information</h3>
+    <div class="form-group">
+      <label>Name:</label>
+      <input type="text" class="form-control" [(ngModel)]="cardData.name">
+    </div>
+
+    <div class="form-group">
+      <label>First Name:</label>
+      <input type="text" class="form-control" [(ngModel)]="cardData.firstname">
+    </div>
+
+    <div class="form-group">
+      <label>Job:</label>
+      <input type="text" class="form-control" [(ngModel)]="cardData.job">
+    </div>
+
+    <div class="form-group">
+      <label>Image:</label>
+      <input type="text" class="form-control" [(ngModel)]="cardData.path">
+    </div>
+
+    <div class="form-group">
+      <label>Quote:</label>
+      <input type="text" class="form-control" [(ngModel)]="cardData.quote">
+    </div>
+
+    <div class="form-group">
+      <label>Description:</label>
+      <textarea class="form-control" [(ngModel)]="cardData.description"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Keywords:</label>
+      <input type="text" class="form-control" [(ngModel)]="cardData.keywords">
+    </div>
+  </div>
+
+  <!-- Card Preview Side -->
+  <div class="card-section">
+    <div class="card-container">
+      <div class="card">
+        <!-- Front -->
+        <div class="front">
+          <div class="cover">
+            <img src="assets/images/rotating_card_thumb.png" />
+          </div>
+          <div class="user">
+            <img class="img-circle" [src]="cardData.path" />
+          </div>
+          <div class="content">
+            <div class="main">
+              <h3 class="name">{{ cardData.firstname }} {{ cardData.name }}</h3>
+              <p class="profession">{{ cardData.job }}</p>
+              <p class="text-center">"{{ cardData.quote }}"</p>
+            </div>
+            <div class="footer">
+              <button class="btn btn-simple" (click)="rotateCard($event)">
+                <i class="fa fa-mail-forward"></i> Auto Rotation
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Back -->
+        <div class="back">
+          <div class="header">
+            <h5 class="motto">"{{ cardData.quote }}"</h5>
+          </div>
+          <div class="content">
+            <div class="main">
+              <h4 class="text-center">Job Description</h4>
+              <p class="text-center">{{ cardData.description }}</p>
+              <div class="stats-container">
+                <div class="stats">
+                  <h4>235</h4>
+                  <p>Followers</p>
+                </div>
+                <div class="stats">
+                  <h4>114</h4>
+                  <p>Following</p>
+                </div>
+                <div class="stats">
+                  <h4>35</h4>
+                  <p>Projects</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            <button class="btn btn-simple" (click)="rotateCard($event)">
+              <i class="fa fa-reply"></i> Back
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

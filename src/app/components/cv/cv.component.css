@@ -1,0 +1,15 @@
+.cv-container {
+    display: flex;
+  }
+  
+  .cv-list-section {
+    flex: 1;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .cv-detail-section {
+    flex: 2;
+    padding: 10px;
+  }
+  

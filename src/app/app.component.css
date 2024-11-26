@@ -1,0 +1,15 @@
+.container {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .rainbow-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd; /* La couleur de bordure sera modifiée par la directive */
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s, color 0.3s; /* Animation fluide des couleurs */
+  }
+  

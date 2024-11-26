@@ -1,0 +1,35 @@
+<h1>Exercice 8 : mini-word</h1>
+<div class="mini-word">
+    <!-- Conteneur flex pour les inputs -->
+    <div class="controls">
+      <!-- Input pour choisir une couleur -->
+      <label for="color">Couleur :</label>
+      <input 
+        type="text" 
+        id="color" 
+        [(ngModel)]="color" 
+        placeholder="Couleur (ex: red, #FF0000)" 
+      />
+  
+      <!-- Input pour définir la taille du texte -->
+      <label for="fontSize">Taille :</label>
+      <input 
+        type="number" 
+        id="fontSize" 
+        [(ngModel)]="fontSize" 
+        placeholder="Taille (px)" 
+      />
+  
+      <!-- Select box pour choisir une police -->
+      <label for="fontFamily">Police :</label>
+      <select id="fontFamily" [(ngModel)]="fontFamily">
+        <option *ngFor="let font of fonts" [value]="font">{{ font }}</option>
+      </select>
+    </div>
+  
+    <!-- Paragraphe avec styles dynamiques -->
+    <p [ngStyle]="{ 'color': color, 'font-size.px': fontSize, 'font-family': fontFamily }">
+      Ceci est un paragraphe modifiable. Changez mes styles avec les contrôles ci-dessus !
+    </p>
+  </div>
+  

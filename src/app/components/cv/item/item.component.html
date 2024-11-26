@@ -1,0 +1,9 @@
+<div class="list-group-item" (click)="onSelectCv()">
+    <div class="d-flex">
+        <img [src]="cv.path" alt="{{cv.firstname}}" class="rounded-circle" width="50">
+        <div class="ms-3">
+            <h3>{{cv.firstname}} {{cv.name}}</h3>
+            <p>{{cv.job}}</p>
+        </div>
+    </div>
+</div>

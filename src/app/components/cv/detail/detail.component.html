@@ -1,0 +1,13 @@
+<div class="card" *ngIf="cv">
+    <div class="card-header">
+        <h2>{{cv.firstname}} {{cv.name}}</h2>
+    </div>
+    <div class="card-body">
+        <img [src]="cv.path" alt="{{cv.firstname}}" class="img-fluid">
+        <ul class="list-group mt-3">
+            <li class="list-group-item">Age: {{cv.age}}</li>
+            <li class="list-group-item">CIN: {{cv.cin}}</li>
+            <li class="list-group-item">Job: {{cv.job}}</li>
+        </ul>
+    </div>
+</div>

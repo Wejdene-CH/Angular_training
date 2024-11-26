@@ -1,0 +1,39 @@
+.cv-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cv-item {
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.cv-item:hover {
+  background-color: #f0f0f0;
+}
+
+.cv-item.active {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.cv-details {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.cv-details img {
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}

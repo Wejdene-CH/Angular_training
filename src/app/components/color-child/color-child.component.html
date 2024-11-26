@@ -1,0 +1,13 @@
+<h1>Exercice 3</h1>
+<div style="margin-top: 20px; padding: 20px; border: 1px solid #ccc;">
+    <h3>Child Component</h3>
+    
+    <div [style.backgroundColor]="parentColor" 
+         style="width: 100px; height: 100px; border: 1px solid black; margin-bottom: 10px;">
+    </div>
+  
+    <p>Parent's color: {{parentColor}}</p>
+    <p>My favorite color: {{myFavoriteColor}}</p>
+  
+    <button (click)="setParentColor()">Set Parent Color to My Favorite</button>
+  </div>
